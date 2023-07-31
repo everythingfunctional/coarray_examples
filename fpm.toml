@@ -1,0 +1,16 @@
+name = "coarray_examples"
+version = "0.1.0"
+license = "license"
+author = "Brad Richardson"
+maintainer = "everythingfunctional@protonmail.com"
+copyright = "Copyright 2023, Brad Richardson"
+
+[[executable]]
+name = "hello_images"
+source-dir = "app"
+main = "hello_images.f90"
+
+[[executable]]
+name = "hello_co_broadcast"
+source-dir = "app"
+main = "hello_co_broadcast.f90"
