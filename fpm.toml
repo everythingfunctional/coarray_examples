@@ -14,3 +14,25 @@ main = "hello_images.f90"
 name = "hello_co_broadcast"
 source-dir = "app"
 main = "hello_co_broadcast.f90"
+
+[[executable]]
+name = "hello_sync_all"
+source-dir = "app"
+main = "hello_sync_all.f90"
+
+[[executable]]
+name = "hello_send_receive"
+source-dir = "app"
+main = "hello_send_receive.f90"
+[executable.dependencies]
+communicator = { git = "https://gitlab.com/everythingfunctional/communicator.git" }
+
+[[executable]]
+name = "hello_sync_images"
+source-dir = "app"
+main = "hello_sync_images.f90"
+
+[[executable]]
+name = "hello_events"
+source-dir = "app"
+main = "hello_events.f90"
