@@ -13,7 +13,6 @@ program hello_send_receive
     ni = num_images()
     if (me == ni) then
         write(message, "(A,I0)") "Hello from image ", me
-        if (me > 1) call comm%send_to(me-1, message)
     else
         call comm%receive_from(me+1, payload)
         select type (payload)
@@ -22,8 +21,8 @@ program hello_send_receive
         class default
             message = "Didn't get a string message"
         end select
-        if (me > 1) call comm%send_to(me-1, message)
     end if
+    if (me > 1) call comm%send_to(me-1, message)
     critical
         print *, "Received message '" // trim(message) // "' on image ", me
     end critical
