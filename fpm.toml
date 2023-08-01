@@ -36,3 +36,10 @@ main = "hello_sync_images.f90"
 name = "hello_events"
 source-dir = "app"
 main = "hello_events.f90"
+
+[[executable]]
+name = "hello_from_everyone"
+source-dir = "app"
+main = "hello_from_everyone.f90"
+[executable.dependencies]
+stdlib = { git = "https://github.com/fortran-lang/stdlib.git", branch = "stdlib-fpm" }
